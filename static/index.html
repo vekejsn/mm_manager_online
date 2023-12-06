@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>mm_manager online</title>
+    <link rel="stylesheet" href="css/bulma.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+</head>
+
+<body>
+    <nav class="navbar is-primary">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="#dashboard">mm_manager online</a>
+        </div>
+        <div class="navbar-menu">
+            <div class="navbar-start" id="navbar-options">
+                <a class="navbar-item" href="#dashboard" id="dashboard">Dashboard</a>
+                <a class="navbar-item" href="#terminals" id="terminals">Terminals</a>
+                <a class="navbar-item" href="#logs" id="options">Logs</a>
+            </div>
+        </div>
+    </nav>
+    <section class="is-main-section">
+        <div class="container">
+            <div id="dashboard">
+                <h1 class="title">Dashboard</h1>
+                <hr>
+                <div class="columns">
+                    <div class="column">
+                        <div class="card">
+                            <div class="card-content">
+                                <p class="title">Terminals</p>
+                                <p class="subtitle">Active in last 24 hours: <span id="dashboard-terminals-count">0</span></p>
+                                <hr>
+                                <table class="table is-striped is-hoverable is-fullwidth">
+                                    <thead>
+                                        <tr>
+                                            <th>Terminal ID</th>
+                                            <th>Date and time of last communication</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="dashboard-terminals-table-body">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="card">
+                            <div class="card-content">
+                                <p class="title">Alarms</p>
+                                <p class="subtitle" id="logs-count">Last 10 alarms:</p>
+                                <hr>
+                                <table class="table is-striped is-hoverable is-fullwidth">
+                                    <thead>
+                                        <tr>
+                                            <th>Terminal ID</th>
+                                            <th>Date and time of alarm</th>
+                                            <th>Alarm type</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="dashboard-alarms-table-body">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="terminals" hidden="1"></div>
+            <div id="logs" hidden="1"></div>
+        </div>
+    </section>
+</body>
+<script src="js/script.js"></script>
+</html>

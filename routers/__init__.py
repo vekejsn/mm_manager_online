@@ -1,0 +1,1 @@
+from . import terminals_info
